@@ -63,7 +63,7 @@ ssh deploy@seu.ip.vps
 Execute o seguinte script para instalar o Whaticket:
 ```bash
 sudo apt update && sudo apt install -y git \
-&& git clone https://github.com/nicogueta/instalador-whaticket-main-v.10.0.1 \
+&& git clone https://github.com/nicogueta/instalador-whaticket-main-v.10.0.1.git \
 && sudo chmod -R 777 instalador-whaticket-main-v.10.0.1 \
 && cd instalador-whaticket-main-v.10.0.1 \
 && sudo ./install_primaria
