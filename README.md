@@ -29,7 +29,7 @@ api.seudominio.com.br
 
 Para acelerar o processo, você pode clonar o repositório com o código-fonte do Whaticket:
 ```
-Repositório: https://github.com/nicogueta/waticketsaas.git
+Repositório: https://github.com/nicogueta/whaticketsaas.git
 ```
 
 ---
@@ -73,7 +73,7 @@ sudo apt update && sudo apt install -y git \
 
 - **Tipo de instalação:** `0` (Instalação)
 - **Nome do banco de dados:** `seu_banco_de_dados`
-- **Repositório GitHub:** `https://github.com/nicogueta/waticketsaas.git`
+- **Repositório GitHub:** `https://github.com/nicogueta/whaticketsaas.git`
 - **Instância/Empresa:** `coloqueumnome`
 - **Valor QR:** `999`
 - **Usuários online:** `999`
