@@ -1,111 +1,105 @@
-# Instalación de Whaticket 10.9
+# Instalando o Whaticket 10.9
 
-Esta versión es liberada gracias al aporte de @LeandroReis2907, especialista en infraestructura TI en Brasil. Bajo ese concepto, mi aporte en contenido en español está alineado con los conceptos de @LeandroReis2907.
-
----
-
-## 1. Acceso al servidor VPS
-
-Adquiere un servidor VPS con sistema operativo **Ubuntu 20.04** o superior. En este caso, se recomienda el proveedor [Contabo](https://contabo.com).
-
-Ejemplo de servidor:
-```
-Server: 62.xx4.2x0.x0
-```
+Esta versão está sendo lançada graças à contribuição de @LeandroReis2907, especialista em infraestrutura de TI no Brasil. Sob esse conceito, minha contribuição em conteúdo em espanhol está alinhada aos conceitos de @LeandroReis2907.
 
 ---
 
-## 2. Configuración de dominios
+## 1. Acesso ao servidor VPS
 
-Debes configurar dos subdominios en tu proveedor de dominios, como [GoDaddy](https://www.godaddy.com/) u otro de tu preferencia. Estos subdominios deben apuntar a tu servidor VPS:
+Compre um servidor VPS com sistema operacional **Ubuntu 20.04** ou superior. Neste caso, o provedor [Contabo](https://contabo.com) é recomendado.
+
+Exemplo de servidor:
 ```
-app.subdominio.online
-api.subdominio.online
+Servidor: 62.xx4.2x0.x0
 ```
 
 ---
 
-## 3. Subir el código a GitHub
+## 2. Configuração de Domínio
 
-Para agilizar el proceso, puedes clonar el repositorio con el código fuente de Whaticket:
+Você deve configurar dois subdomínios com seu provedor de domínio, como [GoDaddy](https://www.godaddy.com/) ou outro de sua escolha. Esses subdomínios devem apontar para o seu servidor VPS:
 ```
-Repositorio: https://github.com/leopoldohuacasiv/waticketsaas.git
+app.seudominio.com.br
+api.seudominio.com.br
 ```
 
 ---
 
-## 4. Iniciar instalación en Ubuntu
+## 3. Carregue o código no GitHub
 
-1. Accede a tu servidor VPS.
-2. Crea un usuario llamado `deploy` y otórgale permisos:
-    ```bash
-    sudo adduser deploy
-    ```
-    - Asigna una contraseña.
-    - Presiona **Enter** en los campos adicionales.
-3. Otorga permisos sudo al usuario:
-    ```bash
-    sudo usermod -aG sudo deploy
-    ```
-4. Cierra la sesión con:
-    ```bash
-    exit
-    ```
-5. Vuelve a ingresar como el usuario `deploy`:
-    ```bash
-    ssh deploy@tu.ip.vps
-    ```
+Para acelerar o processo, você pode clonar o repositório com o código-fonte do Whaticket:
+```
+Repositório: https://github.com/nicogueta/waticketsaas.git
+```
 
 ---
 
-## 5. Ejecutar la instalación
+## 4. Inicie a instalação no Ubuntu
 
-Ejecuta el siguiente script para instalar Whaticket:
+1. Acesse seu servidor VPS.
+2. Crie um usuário chamado `deploy` e conceda a ele permissões:
+```bash
+sudo adduser deploy
+```
+- Atribua uma senha.
+- Pressione **Enter** nos campos adicionais.
+3. Conceda permissões sudo ao usuário:
+```bash
+sudo usermod -aG sudo deploy
+```
+4. Encerre a sessão com:
+```bash
+exit
+```
+5. Efetue novamente o login como usuário `deploy`:
+```bash
+ssh deploy@seu.ip.vps
+```
+
+---
+
+## 5. Execute a instalação
+
+Execute o seguinte script para instalar o Whaticket:
 ```bash
 sudo apt update && sudo apt install -y git \
-&& git clone https://github.com/weliton2k/instalador-whaticket-main-v.10.0.1.git \
+&& git clone https://github.com/nicogueta/instalador-whaticket-main-v.10.0.1 \
 && sudo chmod -R 777 instalador-whaticket-main-v.10.0.1 \
 && cd instalador-whaticket-main-v.10.0.1 \
 && sudo ./install_primaria
 ```
 
-### Datos requeridos durante la instalación:
+### Dados necessários durante a instalação:
 
-- **Tipo de instalación:** `0` (Instalación)
-- **Nombre de la base de datos:** `tubasededatos`
-- **Repositorio de GitHub:** `https://github.com/leopoldohuacasiv/waticketsaas.git`
-- **Instancia/Empresa:** `ponunnombre`
-- **Valor de QR:** `999`
-- **Usuarios conectados:** `999`
-- **Subdominio app:** `app.subdominio.com`
-- **Subdominio API:** `api.subdominio.com`
-- **Conexión 1:** `3000`
-- **Conexión 2:** `4000`
-- **Conexión 3:** `5000`
+- **Tipo de instalação:** `0` (Instalação)
+- **Nome do banco de dados:** `seu_banco_de_dados`
+- **Repositório GitHub:** `https://github.com/nicogueta/waticketsaas.git`
+- **Instância/Empresa:** `coloqueumnome`
+- **Valor QR:** `999`
+- **Usuários online:** `999`
+- **Aplicativo de subdomínio:** `app.seudominio.com.br`
+- **API de subdomínio:** `api.seudominio.com.br`
+- **Conexão 1:** `3000`
+- **Conexão 2:** `4000`
+- **Conexão 3:** `5000`
 
-> **Nota:** La instalación puede tardar entre **40 y 60 minutos** dependera de la velovidad del servidor VPS que contrate.
-
----
-
-## 6. Acceder al sistema
-
-Una vez completada la instalación, ingresa a la plataforma en:
-```
-app.subdominio.com
-```
-
-Credenciales por defecto:
-```
-Usuario: admin@admin.com
-Contraseña: 123456
-```
+> **Observação:** a instalação pode levar entre **40 e 60 minutos** dependendo da velocidade do servidor VPS que você contratar.
 
 ---
 
-### ¡Instalación completada con éxito! 🎉
+## 6. Acesse o sistema
 
-## Dato Extra
+Após a conclusão da instalação, faça login na plataforma em:
+```
+app.seudominio.com.br
+```
 
-Descarga el archivo .js de potugues a español accediendo al grupo de whatsapp: [Sistemas con WhatsApp](https://chat.whatsapp.com/HR9PZZLqsRHAP8ZA8s0H5G)
+Credenciais padrão:
+```
+Usuário: admin@admin.com
+Senha: 123456
+```
 
-Y escribe la palabra clave en el chat del grupo "traduciraespañol" para que el BOT te comparta el link de descarga
+---
+
+### Instalação concluída com sucesso! 🎉
